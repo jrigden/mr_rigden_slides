@@ -14,7 +14,7 @@ Cut word after cursor
 Move forward one word
 
 ---
-##Ctrl + a	
+#Ctrl + a	
 Go to the beginning of the line
 
 
