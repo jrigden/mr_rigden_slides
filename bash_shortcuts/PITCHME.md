@@ -2,15 +2,15 @@
 
 
 ---
-##Alt + b
+#Alt + b
 Move back one word
 
 ---
-##Alt + d
+#Alt + d
 Cut word after cursor
 
 ---
-##Alt + f	
+#Alt + f	
 Move forward one word
 
 ---
@@ -19,7 +19,7 @@ Go to the beginning of the line
 
 
 ---
-##Ctrl + c	
+#Ctrl + c	
 Kill current process
 
 
