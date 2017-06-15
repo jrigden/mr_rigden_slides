@@ -2,7 +2,7 @@
 This is the gitpitch template
 footnote : "© 2017 Jason Rigden"
 
----?image=http://lofrev.net/wp-content/photos/2016/06/thundercats-logo_-1.png
+---?image=http://lofrev.net/wp-content/photos/2016/06/thundercats-logo_-1.png&size=auto 90%
 
 ---
 This is anthorer
