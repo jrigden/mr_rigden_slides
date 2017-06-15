@@ -14,4 +14,3 @@ Awesome Python is a  curated list of awesome Python frameworks, libraries, softw
 It covers everything from Python podcasts to template engines.
 
 
- | width=250
