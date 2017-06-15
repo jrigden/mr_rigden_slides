@@ -2,8 +2,9 @@
 This is the gitpitch template
 footnote : "© 2017 Jason Rigden"
 
----
+---?image=http://lofrev.net/wp-content/photos/2016/06/thundercats-logo_-1.png
 
+---
 This is anthorer
 
 ---
