@@ -1,5 +1,5 @@
 #Awesome Lists
-![Image of Awesome Glassed](https://jasonrigden.com/share/images_dump/awesome.png | width=250)
+![Image of Awesome Glassed](https://jasonrigden.com/share/images_dump/awesome.png)
 
 ---
 ##What is an Awesome Lists?
@@ -14,3 +14,4 @@ Awesome Python is a  curated list of awesome Python frameworks, libraries, softw
 It covers everything from Python podcasts to template engines.
 
 
+ | width=250
