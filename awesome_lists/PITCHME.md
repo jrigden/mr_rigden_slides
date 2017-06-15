@@ -1,5 +1,5 @@
 #Awesome Lists
-![Image of Awesome Glassed](https://jasonrigden.com/share/images_dump/awesome.png)
+![Image of Awesome Glassed](https://jasonrigden.com/share/images_dump/awesome.png | width=250)
 
 ---
 ##What is an Awesome Lists?
