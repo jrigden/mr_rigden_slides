@@ -11,9 +11,9 @@ Quick review of iterables and list comprehesions
 
 An iterable is an object that can be iterated over
 
-In other words, an object that can be used in a `for` loop. <!-- .element: class="fragment" -->
+In other words, an object that can be used in a `for` loop.
 
-Exampes: `lists`,`str`, `tuple` <!-- .element: class="fragment" -->
+Exampes: `lists`,`str`, `tuple`
 
 ---
 
