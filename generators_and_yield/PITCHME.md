@@ -188,49 +188,29 @@ World
 
 ---
 
-## Bad Yield Demo
+## Yield
 
 ```
 def multiYield():
     x = 5
     yield x
     x = x + 5
-    yield "World"
-    yield "!"
+    yield x
+    x = x * x
+    yield x
 
 
 for each in multiYield():
     print(each)
 
 ```
-
----
-
-
-## Yield
-
-Each time we iterate over `new_generator`, we step through the function. 
-
-```
-def multiYield():
-    x = 5
-    yield x
-    x = x*x
-    yield x
-    x = x - 3
-    yield x
-
-for each in multiYield():
-    print(each)
-```
-
 ```
 5
-25
-22
+10
+100
 ```
-
 ---
+
 
 ## Why?
 
