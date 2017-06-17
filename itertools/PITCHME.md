@@ -395,7 +395,7 @@ for each in result:
 10 < 5:  False, keep
 ```
 
-----
+---
 
 ## groupby()
 
@@ -739,6 +739,7 @@ If r is not specified or is None, then r defaults to the length of the iterable 
 
 
 ---
+## permutations()
 
 ```
 alpha_data = ['a', 'b', 'c']
