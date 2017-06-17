@@ -185,6 +185,25 @@ World
 !
 ```
 
+
+---
+
+## Bad Yield Demo
+
+```
+def multiYield():
+    x = 5
+    yield x
+    x = x + 5
+    yield "World"
+    yield "!"
+
+
+for each in multiYield():
+    print(each)
+
+```
+
 ---
 
 
