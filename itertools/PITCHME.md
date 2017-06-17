@@ -5,6 +5,7 @@
 ## Setup
 
 import itertools
+
 import operator
 
 ---
