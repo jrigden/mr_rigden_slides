@@ -34,6 +34,7 @@ for each in data:
 3
 4
 ```
+---
 
 # Iterables
 
@@ -200,7 +201,6 @@ def multiYield():
     x = x - 3
     yield x
 
-
 for each in multiYield():
     print(each)
 ```
@@ -229,9 +229,7 @@ print(memory_size)
 8697464
 ```
 
-We have to calulate the square of 1,000,000 numbers and store them in memory.
-
-What happend when it is 1,000,000^n numbers?
+We have to calulate the square of 1,000,000 numbers and store them in memory. What happend when it is 1,000,000^n numbers?
 
 Or we can use generators that will do it one at a time.
 
