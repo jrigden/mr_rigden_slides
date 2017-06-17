@@ -115,7 +115,7 @@ for i in itertools.repeat(food):
 	print(i)
 ```
 
-Infinate Spam
+Infinite Spam
 
 ---
 
@@ -259,7 +259,7 @@ pentagon
 itertools.compress(data, selectors)
 ```
 
-Filter one interable with another.
+Filter one iterable with another.
 
 ---
 
@@ -326,7 +326,7 @@ for each in result:
 ```
 itertools.dropwhile(predicate, iterable)
 ```
-Kind of the oposite of dropwhile()
+Kind of the opposite of dropwhile()
 
 Make an iterator that returns elements from the iterable as long as the predicate is true.
 
