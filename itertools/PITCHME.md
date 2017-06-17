@@ -2,6 +2,13 @@
 
 ---
 
+## Setup
+
+import itertools
+import operator
+
+---
+
 ## count()
 
 ```
@@ -125,12 +132,19 @@ Make an iterator that returns results of functions.
 ```
 data = [1, 2, 3, 4, 5]
 result = itertools.accumulate(data, operator.mul)
-print(list(result))
+for each in result:
+    print(each)
+
 
 ```
 
 ```
-[1, 2, 6, 24, 120]
+1
+2
+6
+24
+120
+
 ```
 
 ```
@@ -150,13 +164,20 @@ operator.mul(24, 5)
 
 ```
 data = [5, 2, 6, 4, 5, 9, 1]
-result = list(itertools.accumulate(data, max))
-print(result)
-
+result = itertools.accumulate(data, max)
+for each in result:
+    print(each)
 ```
 
 ```
-[5, 5, 6, 6, 6, 9, 9]
+5
+5
+6
+6
+6
+9
+9
+
 ```
 
 ```
@@ -180,12 +201,19 @@ max(9, 1)
 ```
 data = [5, 2, 6, 4, 5, 9, 1]
 result = itertools.accumulate(data)
-result = list(result)
-print(result)
+for each in result:
+    print(each)
 ```
 
 ```
-[5, 7, 13, 17, 22, 31, 32]
+5
+7
+13
+17
+22
+31
+32
+
 ```
 ```
 5
@@ -202,17 +230,24 @@ print(result)
 Takes a series of iterables and return them as one long iterable.
 
  ```
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green', 'blue']
 shapes = ['circle', 'triangle', 'square', 'pentagon']
 
 result = itertools.chain(colors, shapes)
-result = list(result)
-print(result)
+for each in result:
+    print(each)
 ```
 
 ```
-['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'circle', 'triangle', 'square', 'pentagon']
-
+red
+orange
+yellow
+green
+blue
+circle
+triangle
+square
+pentagon
 ```
 
 ---
@@ -234,12 +269,13 @@ shapes = ['circle', 'triangle', 'square', 'pentagon']
 selections = [True, False, True, False]
 
 result = itertools.compress(shapes, selections)
-result = list(result)
-print(result)
+for each in result:
+    print(each)
 ```
 
 ```
-['circle', 'square']
+circle
+square
 ```
 
 
@@ -258,12 +294,20 @@ Make an iterator that drops elements from the iterable as long as the predicate 
 
 ```
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
+
 result = itertools.dropwhile(lambda x: x<5, data)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[5, 6, 7, 8, 9, 10, 1]
+5
+6
+7
+8
+9
+10
+1
 ```
 
 ```
@@ -273,8 +317,6 @@ print(list(result))
  4 < 5:  True,  drop
  5 < 5:  False, return surviving items
 ```
-
-Take note of 1.
 
 ----
 
@@ -289,12 +331,18 @@ Make an iterator that returns elements from the iterable as long as the predicat
 
 ```
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
+
 result = itertools.takewhile(lambda x: x<5, data)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[1, 2, 3, 4]
+1
+2
+3
+4
+
 ```
 
 ```
@@ -304,8 +352,6 @@ print(list(result))
  4 < 5:  True,   keep going
  5 < 5:  False, stop and drop
 ```
-
-Take note of 1.
 
 ----
 
@@ -321,12 +367,18 @@ Make an iterator that filters elements from iterable returning only those for wh
 ```
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 result = itertools.filterfalse(lambda x: x<5, data)
-print(list(result))
+for each in result:
+    print(each)
 
 ```
 
 ```
-[5, 6, 7, 8, 9, 10]
+5
+6
+7
+8
+9
+10
 ```
 
 ```
@@ -384,7 +436,7 @@ robots = [{
 We need to sort them.
 
 ```
-sorted_robots  = sorted(robots, key=operator.itemgetter('faction'))
+bots  = sorted(robots, key=operator.itemgetter('faction'))
 ```
 
 ---
@@ -418,7 +470,7 @@ sorted_robots  = sorted(robots, key=operator.itemgetter('faction'))
 ## groupby()
 
 ```
-for key, group in itertools.groupby(robots, key=lambda x: x['faction']):
+for key, group in itertools.groupby(bots, key=lambda x: x['faction']):
     print(key)
     print(list(group))
 ```
@@ -448,13 +500,15 @@ Very much like slice. This function allows you to cut out a piece of an iterable
 ## islice()
 
 ```
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green', 'blue',]
 few_colors = itertools.islice(colors, 2)
-print(list(few_colors))
+for each in few_colors:
+    print(each)
 ```
 
 ```
-['red', 'orange']
+red
+orange
 ```
 
 ---
@@ -462,14 +516,16 @@ print(list(few_colors))
 ## islice()
 
 ```
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green', 'blue',]
 few_colors = few_colors = itertools.islice(colors, 2, 5)
-print(list(few_colors))
+for each in few_colors:
+    print(each)
 ```
 
 ```
-['yellow', 'green', 'blue']
-
+yellow
+green
+blue
 ```
 
 Starts at index 2 and ends at index 5
@@ -492,12 +548,14 @@ Make an iterator that computes the function using arguments obtained from the it
 ```
 data = [(2, 6), (8, 4), (7, 3)]
 result = itertools.starmap(operator.mul, data)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[12, 32, 21]
-
+12
+32
+21
 ```
 
 ---
@@ -515,15 +573,27 @@ Return n independent iterators from a single iterable.
 ## tee()
 
 ```
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green', 'blue']
 alpha_colors, beta_colors = itertools.tee(colors)
-print(list(alpha_colors))
-print(list(beta_colors))
+
+for each in alpha_colors:
+    print(each)
+
+for each in beta_colors:
+     print(each)
 ```
 
 ```
-['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+red
+orange
+yellow
+green
+blue
+red
+orange
+yellow
+green
+blue
 ```
 
 ---
@@ -538,7 +608,7 @@ Make an iterator that aggregates elements from each of the iterables. If the ite
 ## zip_longest()
 
 ```
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green', 'blue',]
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
 for each in itertools.zip_longest(colors, data, fillvalue=None):
     print(each)
@@ -550,11 +620,12 @@ for each in itertools.zip_longest(colors, data, fillvalue=None):
 ('yellow', 3)
 ('green', 4)
 ('blue', 5)
-('indigo', 6)
-('violet', 7)
+(None, 6)
+(None, 7)
 (None, 8)
 (None, 9)
 (None, 10)
+
 
 ```
 
@@ -571,15 +642,14 @@ Creates combinations.
 ```
 shapes = ['circle', 'triangle', 'square',]
 result = itertools.combinations(shapes, 2)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[('circle', 'triangle'), 
- ('circle', 'square'),
- ('triangle', 'square')]
-
-
+('circle', 'triangle')
+('circle', 'square')
+('triangle', 'square')
 ```
 
 
@@ -596,12 +666,18 @@ Creates combinations with doubles.
 ```
 shapes = ['circle', 'triangle', 'square',]
 result = itertools.combinations_with_replacement(shapes, 2)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[('circle', 'triangle'), ('circle', 'square'), ('triangle', 'square')]
-[('circle', 'circle'), ('circle', 'triangle'), ('circle', 'square'), ('triangle', 'triangle'), ('triangle', 'square'), ('square', 'square')]
+('circle', 'circle')
+('circle', 'triangle')
+('circle', 'square')
+('triangle', 'triangle')
+('triangle', 'square')
+('square', 'square')
+
 
 ```
 
@@ -615,16 +691,32 @@ itertools.product(*iterables, repeat=1)
 Cartesian products from a series of  iterables.
 
 ---
+
+## product()
+
 ```
 num_data = [1, 2, 3]
 alpha_data = ['a', 'b', 'c']
 result = itertools.product(num_data, alpha_data)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[(1, 'a'), (1, 'b'), (1, 'c'), (2, 'a'), (2, 'b'), (2, 'c'), (3, 'a'), (3, 'b'), (3, 'c')]
+(1, 'a')
+(1, 'b')
+(1, 'c')
+(2, 'a')
+(2, 'b')
+(2, 'c')
+(3, 'a')
+(3, 'b')
+(3, 'c')
 ```
+
+---
+
+## product()
 
 ```
         a     b      c
@@ -650,10 +742,15 @@ If r is not specified or is None, then r defaults to the length of the iterable 
 ```
 alpha_data = ['a', 'b', 'c']
 result = itertools.permutations(alpha_data)
-print(list(result))
+for each in result:
+    print(each)
 ```
 
 ```
-[('a', 'b', 'c'), ('a', 'c', 'b'), ('b', 'a', 'c'), ('b', 'c', 'a'), ('c', 'a', 'b'), ('c', 'b', 'a')]
-
+('a', 'b', 'c')
+('a', 'c', 'b')
+('b', 'a', 'c')
+('b', 'c', 'a')
+('c', 'a', 'b')
+('c', 'b', 'a')
 ```
