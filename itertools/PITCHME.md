@@ -2,14 +2,16 @@
 
 ---
 
-
 ## count()
+
 ```
 itertools.count(start=0, step=1)
 ```
 Make an iterator that returns evenly spaced values starting with number start.
 
 ---
+
+## count()
 
 ```
 for i in itertools.count(10,3):
@@ -26,26 +28,30 @@ for i in itertools.count(10,3):
 19
 22
 ```
+
 ---
 
 ## cycle()
+
 ```
 itertools.cycle(iterable)
 ```
-Make an iterator that cycles through an iterator.
+
+Make an iterator that cycles through an iterator endlessly.
 
 ---
 
+## cycle()
+
 ```
 count = 0
-colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+colors = ['red', 'orange', 'yellow', 'green',
+          'blue', 'violet']
 for color in itertools.cycle(colors):
-	print(color)
-	count += 1
-	if count > 10:
-		break
-
-
+    print(color)
+    count += 1
+    if count > 10:
+        break
 ```
 
 ```
@@ -62,18 +68,19 @@ yellow
 green
 
 ```
-@[1-7](First Cycle)
-@[8-10](Next Cycle)
-
 
 ---
 
 ## repeat()
+
 ```
 itertools.repeat(object[, times])
 ```
-Repeat object over and over again. Unless, there is a times arguement.
+Repeat object over and over again. Unless, there is a <code>times</code> arguement.
+
 ---
+
+## repeat()
 
 ```
 food = "spam"
@@ -91,6 +98,8 @@ spam
 ```
 
 ---
+
+## repeat()
 
 ```
 food = "spam"
@@ -209,10 +218,16 @@ print(result)
 ---
 
 ##compress()
+
 ```
 itertools.compress(data, selectors)
 ```
+
 Filter one interable with another.
+
+---
+
+##compress()
 
 ```
 shapes = ['circle', 'triangle', 'square', 'pentagon']
@@ -231,10 +246,15 @@ print(result)
 ---
 
 ##dropwhile()
+
 ```
 itertools.dropwhile(predicate, iterable)
 ```
 Make an iterator that drops elements from the iterable as long as the predicate is true; afterwards, returns every element.
+
+---
+
+##dropwhile()
 
 ```
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
@@ -325,20 +345,12 @@ print(list(result))
 ----
 
 ## groupby()
+
 ```
 itertools.groupby(iterable, key=None)
 ```
 
-Ok. This one is complicated.
-
-Just stay cool and nobody gets hurt. OK?
-
-
----
-## groupby()
-
-Simply put, this function groups things together.
-
+Simply put, this function groups things together. Ok. This one is complicated.
 
 ---
 
@@ -372,10 +384,15 @@ robots = [{
 We need to sort them.
 
 ```
-sorted_robots = robots = sorted(robots, key=operator.itemgetter('faction'))
+sorted_robots  = sorted(robots, key=operator.itemgetter('faction'))
 ```
 
+---
+
+## groupby()
+
 ```
+
 [{
     'name': 'blaster',
     'faction': 'autobot'
@@ -390,9 +407,7 @@ sorted_robots = robots = sorted(robots, key=operator.itemgetter('faction'))
     'faction': 'decepticon'
 }, {
     'name': 'megatron',
-    'faction': 'decepticon'Combinations are emitted in lexicographic sort order. So, if the input iterable is sorted, the combination tuples will be produced in sorted order.
-
-
+    'faction': 'decepticon'
 }, {
     'name': 'starcream',
     'faction': 'decepticon'
@@ -408,14 +423,16 @@ for key, group in itertools.groupby(robots, key=lambda x: x['faction']):
     print(list(group))
 ```
 
+
+
  ```
 autobot
 [{'faction': 'autobot', 'name': 'blaster'}, {'faction': 'autobot', 'name': 'jazz'}, {'faction': 'autobot', 'name': 'metroplex'}]
 decepticon
 [{'faction': 'decepticon', 'name': 'galvatron'}, {'faction': 'decepticon', 'name': 'megatron'}, {'faction': 'decepticon', 'name': 'starcream'}]
 ```
-@[1-2](First Group aka Autobots)
-@[3-4](Second Group aka Decepticons)
+@[4-5](First Group aka Autobots)
+@[6-7](Second Group aka Decepticons)
 
 ---
 
@@ -424,7 +441,7 @@ decepticon
 itertools.islice(iterable, stop)
 itertools.islice(iterable, start, stop[, step])
 ```
-Very much like slice this function allows you to cut out a piece of an iterable.
+Very much like slice. This function allows you to cut out a piece of an iterable.
 
 ---
 
@@ -439,6 +456,8 @@ print(list(few_colors))
 ```
 ['red', 'orange']
 ```
+
+---
 
 ## islice()
 
@@ -483,8 +502,8 @@ print(list(result))
 
 ---
 
-
 ## tee()
+
 ```
 itertools.tee(iterable, n=2)
 ```
@@ -492,11 +511,14 @@ Return n independent iterators from a single iterable.
 
 
 ---
+
+## tee()
+
 ```
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 alpha_colors, beta_colors = itertools.tee(colors)
 print(list(alpha_colors))
-print(list(beta_colors ))
+print(list(beta_colors))
 ```
 
 ```
@@ -535,10 +557,7 @@ for each in itertools.zip_longest(colors, data, fillvalue=None):
 (None, 10)
 
 ```
-```
-'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
-1       ,                 2,                3,               4,          5,                6,               7,  8, 9, 10,]
-```
+
 
 ---
 
@@ -556,7 +575,9 @@ print(list(result))
 ```
 
 ```
-[('circle', 'triangle'), ('circle', 'square'), ('triangle', 'square')]
+[('circle', 'triangle'), 
+ ('circle', 'square'),
+ ('triangle', 'square')]
 
 
 ```
@@ -606,7 +627,7 @@ print(list(result))
 ```
 
 ```
-	a	b	c
+        a     b      c
 1	a1	b1	c1
 2	a2	b2	c3
 3	a3	b3	b3
