@@ -215,7 +215,7 @@ for each in multiYield():
 
 ## Why?
 
-Basically: These generators are lazy. They only work on demand. Save cpu and memory.
+These generators are lazy. They only work on demand. Save cpu and memory.
 
 
 ```
@@ -239,7 +239,7 @@ Or we can use generators that will do it one at a time.
 
 ## Fibonacci
 
-Legally, every Python turorial about `yield` and generators must have a Fibonacci sequence demo.
+Every Python tutorial about `yield` and generators must include a Fibonacci sequence.
 
 ---
 
