@@ -9,8 +9,10 @@ There are Awesome Lists for almost every language and platform.
 
 ---
 ##Example:
-Awesome Python is a  curated list of awesome Python frameworks, libraries, software and resources. 
+Awesome Python is a  curated list of awesome Python frameworks, libraries, software and resources.
 
 It covers everything from Python podcasts to template engines.
 
 
+---
+##Example:
