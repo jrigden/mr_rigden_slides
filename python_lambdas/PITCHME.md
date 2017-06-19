@@ -25,6 +25,8 @@ Especially, with the AWS Lambdas service.
 
 Python Lambda expressions and have nothing to do with AWS.
 
+---
+
 ## What are Lambda expressions?
 
 They are just small nameless functions.
@@ -34,6 +36,8 @@ They are throw away functions.
 They contain a single expression.
 
 Short single use code.
+
+---
 
 ## There are really two ways to make a function
 
@@ -55,11 +59,15 @@ Lambdas are not necessary. But, they are helpful.
 
 There are cases where it can make your code more readable.
 
+---
+
 ## map()sizer = lambda x: 'big' if x > 100 else 'small'
 
 The `map()` function in python, takes a function and an iterable.
 
 It returns an iterable that applies the function to every item in the given iterable.
+
+---
 
 ## map()
 ```
@@ -80,6 +88,7 @@ sizer = lambda x: 'big' if x > 100 else 'small'
 9
 16
 ```
+---
 
 ## map()
 ```
@@ -99,7 +108,7 @@ for each in squared_data:
 9
 16
 ```
-
+---
 ## map()
 
 ```
