@@ -331,7 +331,7 @@ print(less_than_ten)
 
 ---
 
-## Coping Lists
+## Copying Lists
 
 Warning
 
@@ -348,7 +348,7 @@ print(shapes)
 
 ---
 
-## Coping Lists
+## Copying Lists
 
 Python 3.3+ Only
 
