@@ -11,7 +11,7 @@ A Python data type that holds a collection of other Python objects
 ## Examples
 
 ```
-counts = [5, 125, 1, -1]item
+counts = [5, 125, 1, -1]
 ```
 
 A list of numbers
