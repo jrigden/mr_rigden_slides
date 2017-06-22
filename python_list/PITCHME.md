@@ -3,7 +3,7 @@
 
 ## What are lists?
 
-A Python object that holds a collection of other Python objects
+A Python data type that holds a collection of other Python objects
 
 
 ---
