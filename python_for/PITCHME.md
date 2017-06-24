@@ -6,8 +6,9 @@ for <variable> in <sequence>:
 	<statements>
 ```
 
-## Example
 ---
+## Example
+
 ```
 data = [1, 2, 3, 4, 5]
 for number in data:
@@ -30,7 +31,7 @@ Data that can be looped over. A sequence of data.
 Common examples: `lists`, `str`, `tuples`
 
 
-
+---
 ## break
 
 `break` stop the loop.
