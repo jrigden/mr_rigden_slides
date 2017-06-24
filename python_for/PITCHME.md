@@ -70,7 +70,7 @@ for number in data:
 ---
 ## else
 
-`else` executes when the expression is false, but not when the loop is terminated by a `break`
+`else` executes when the iterator is exhausted, but not when the loop is terminated by a `break`
 
 ```
 data = [1, 2, 3, 4, 5]
