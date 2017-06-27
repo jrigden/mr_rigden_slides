@@ -6,8 +6,10 @@ while <expression>:
     <statements>
 ```
 
-## Example
 ---
+
+
+## Example
 ```
 counter = 0
 while counter < 5:
@@ -81,7 +83,8 @@ else:
 3
 4
 5
-Out of numbers
+Out of numbers---
+
 ```
 
 ---
